@@ -13,21 +13,18 @@
 
 public class Main {
     public static void main(String[] args) {
-        int id = 1;
+        Human NikitaIvanov = new Human("Nikita", "Ivanov", Gender.man);
 
-        Human NikitaIvanov = new Human(id++, "Nikita", "Ivanov", Gender.man);
+        Human IvanIvanov = new Human("Ivan", "Ivanov", Gender.man);
+        Human IrinaIvanova = new Human("Irina", "Ivanova", Gender.woman);
+        Human AlexeyKazanskiy = new Human("Alexey", "Kazanskiy", Gender.man);
 
-        Human IvanIvanov = new Human(id++, "Ivan", "Ivanov", Gender.man);
-        Human IrinaIvanova = new Human(id++, "Irina", "Ivanova", Gender.woman);
-        Human AlexeyKazanskiy = new Human(id++, "Alexey", "Kazanskiy", Gender.man);
+        Human PetrIvanov = new Human("Petr", "Ivanov", Gender.man);
+        Human MariaAndroonova = new Human("Maria", "Androonova", Gender.woman);
+        Human KonstantinKazanskiy = new Human("Konstantin", "Kazanskiy", Gender.man);
+        Human SvetlanaGagarina = new Human("Svetlana", "Gagarina", Gender.woman);
 
-        Human PetrIvanov = new Human(id++, "Petr", "Ivanov", Gender.man);
-        Human MariaAndroonova = new Human(id++, "Maria", "Androonova", Gender.woman);
-        Human KonstantinKazanskiy = new Human(id++, "Konstantin", "Kazanskiy", Gender.man);
-        Human SvetlanaGagarina = new Human(id++, "Svetlana", "Gagarina", Gender.woman);
-
-        Human RomanPetrov = new Human(id, "Roman", "Petrov", Gender.man);
-
+        Human RomanPetrov = new Human("Roman", "Petrov", Gender.man);
 
         NikitaIvanov.setFather(IvanIvanov);
         NikitaIvanov.setMother(IrinaIvanova);
@@ -41,12 +38,20 @@ public class Main {
 
         SvetlanaGagarina.setFather(RomanPetrov);
 
+        System.out.println(NikitaIvanov);
+
         NikitaIvanov.showTreeParents();
         RomanPetrov.showTreeDescendants();
-        AlexeyKazanskiy.showSiblibgs(Gender.woman);
+        AlexeyKazanskiy.showSiblings(Gender.woman);
         NikitaIvanov.showUnclesAunts(Gender.man);
         IvanIvanov.showSpouse();
-        KonstantinKazanskiy.showChilds();
+        KonstantinKazanskiy.showChildren();
         IvanIvanov.showParents();
+        NikitaIvanov.showSpouse();
+
+        Cat barsik = new Cat("barsik", Gender.man);
+        Cat pushok = new Cat("pushok", Gender.woman);
+        pushok.setFather(barsik);
+        barsik.showTreeDescendants();
     }
 }
