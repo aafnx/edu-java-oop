@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractCreature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTreeShowable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +38,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/aafnx/Library/Mobile Documents/com~apple~CloudDocs/edu/1. GeekBrains/Web-dev 3.0/1. Основные курсы/3. Java. Объектно-ориентированное программирование./homework-java-oop"
+    "last_opened_file_path": "/Users/aafnx/Library/Mobile Documents/com~apple~CloudDocs/edu/1. GeekBrains/Web-dev 3.0/1. Основные курсы/3. Java. Объектно-ориентированное программирование./homework-java-oop",
+    "settings.editor.selected.configurable": "preferences.sourceCode"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -239,5 +235,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
