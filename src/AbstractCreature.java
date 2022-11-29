@@ -206,8 +206,14 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
     }
     public HashSet<AbstractCreature> getUnclesAunts(Gender gender) {
         HashSet<AbstractCreature> result = new HashSet<>();
-        HashSet<AbstractCreature> motherBrothersSisters = this.getMother().getSiblings(gender);
-        HashSet<AbstractCreature> fatherBrothersSisters = this.getFather().getSiblings(gender);
+        HashSet<AbstractCreature> motherBrothersSisters = null;
+        HashSet<AbstractCreature> fatherBrothersSisters = null;
+        if (this.getMother() != null) {
+            motherBrothersSisters = this.getMother().getSiblings(gender);
+        }
+        if (this.getFather() != null) {
+            fatherBrothersSisters = this.getFather().getSiblings(gender);
+        }
 
         if (motherBrothersSisters != null) {
             result.addAll(motherBrothersSisters);

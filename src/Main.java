@@ -28,7 +28,9 @@ public class Main {
         AlexeyKazanskiy.setFather(KonstantinKazanskiy);
         AlexeyKazanskiy.setMother(SvetlanaGagarina);
 
+
         SvetlanaGagarina.setFather(RomanPetrov);
+
 
         System.out.println(NikitaIvanov);
 
