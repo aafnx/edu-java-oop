@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public abstract class AbstractCreature implements FamilyTreeShowable {
+public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCreature> {
     private static int count;
     protected final int id;
     protected String firstName;
