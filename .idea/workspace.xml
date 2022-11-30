@@ -3,18 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/AbstractCreature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/FamilyTreeShowable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Human.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AbstractCreature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTreeShowable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTreeShowable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +21,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>

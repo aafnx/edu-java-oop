@@ -1,13 +1,11 @@
 package model;
 
-import view.View;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class FamilyTree<T extends AbstractCreature> {
+public class FamilyTreeRepository<T extends AbstractCreature> {
     private List<T> list;
-    public FamilyTree() {
+    public FamilyTreeRepository() {
         this.list = new ArrayList<>();
     }
     public void add(T creature) {

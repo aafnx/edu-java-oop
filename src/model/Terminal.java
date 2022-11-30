@@ -1,7 +1,6 @@
 package model;
 
 public class Terminal {
-    private String answer;
     public boolean start() {
         return true;
     }
@@ -10,11 +9,13 @@ public class Terminal {
     }
 
     public void commandNotFound() {
-        this.answer = "\nCommand not found: list commands - 'list', if you want exit type - 'exit'";
-        System.err.println(answer);
+        System.err.printf("\nCommand not found: list commands - '%s', if you want exit type - '%s'", cmd.list.name(), cmd.exit.name());
     }
     public void printCommands() {
-        this.answer = "List commands:\nshow, father, mother, parents, spouse, children, sister, brother, aunt, uncle, TreeParents, TreeDescendants, showAll";
-        System.out.println(answer);
+        System.out.println("List commands: ");
+        for (cmd command : cmd.values()) {
+            System.out.printf("%s ", command.name());
+        }
+        System.out.println();
     }
 }

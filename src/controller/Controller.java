@@ -1,20 +1,17 @@
 package controller;
 
-import model.AbstractCreature;
-import model.FamilyTree;
-import model.Gender;
-import model.Terminal;
+import model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Controller<T extends AbstractCreature> {
-    private FamilyTree<T> familyTree;
+    private FamilyTreeRepository<T> familyTreeRepository;
     private Terminal terminal;
 
-    public Controller(FamilyTree<T> familyTree, Terminal terminal) {
-        this.familyTree = familyTree;
+    public Controller(FamilyTreeRepository<T> familyTreeRepository, Terminal terminal) {
+        this.familyTreeRepository = familyTreeRepository;
         this.terminal = terminal;
     }
     public boolean scanCommand(String data) {
@@ -30,26 +27,25 @@ public class Controller<T extends AbstractCreature> {
         return this.task(action, name);
     }
     public boolean task(String action, String name) {
-        switch (action.toLowerCase()) {
-            case "show" -> familyTree.show(name);
-            case "father" -> familyTree.showFather(name);
-            case "mother" -> familyTree.showMother(name);
-            case "parents" -> familyTree.showParents(name);
-            case "spouse" -> familyTree.showSpouse(name);
-            case "children" -> familyTree.showChildren(name);
-            case "sister" -> familyTree.showSiblings(name, Gender.woman);
-            case "brother" -> familyTree.showSiblings(name, Gender.man);
-            case "aunt" -> familyTree.showUnclesAunts(name, Gender.woman);
-            case "uncle" -> familyTree.showUnclesAunts(name, Gender.man);
-            case "treeparents" -> familyTree.showTreeParents(name);
-            case "treedescendants" -> familyTree.showTreeDescendants(name);
-            case "showall" -> familyTree.showAll();
-            case "list" -> terminal.printCommands();
-            case "exit" -> {
-                return terminal.stop();
-            }
-            default -> terminal.commandNotFound();
-        }
+        action = action.toLowerCase();
+
+        if (action.equals(cmd.show.name())) familyTreeRepository.show(name);
+        else if (action.equals(cmd.father.name())) familyTreeRepository.showFather(name);
+        else if (action.equals(cmd.mother.name())) familyTreeRepository.showMother(name);
+        else if (action.equals(cmd.parents.name())) familyTreeRepository.showParents(name);
+        else if (action.equals(cmd.spouse.name())) familyTreeRepository.showSpouse(name);
+        else if (action.equals(cmd.children.name())) familyTreeRepository.showChildren(name);
+        else if (action.equals(cmd.sister.name())) familyTreeRepository.showSiblings(name, Gender.woman);
+        else if (action.equals(cmd.brother.name())) familyTreeRepository.showSiblings(name, Gender.man);
+        else if (action.equals(cmd.aunt.name())) familyTreeRepository.showUnclesAunts(name, Gender.woman);
+        else if (action.equals(cmd.uncle.name())) familyTreeRepository.showUnclesAunts(name, Gender.man);
+        else if (action.equals(cmd.treeparents.name())) familyTreeRepository.showTreeParents(name);
+        else if (action.equals(cmd.treedescendants.name())) familyTreeRepository.showTreeDescendants(name);
+        else if (action.equals(cmd.showall.name())) familyTreeRepository.showAll();
+        else if (action.equals(cmd.list.name())) terminal.printCommands();
+        else if (action.equals(cmd.exit.name())) return terminal.stop();
+        else terminal.commandNotFound();
+
         return terminal.start();
     }
 }
