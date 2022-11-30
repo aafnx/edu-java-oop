@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,6 +27,9 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
 
     public void setFirstName(String name) {
         this.firstName = name;
+    }
+    public String getName() {
+        return this.firstName;
     }
     public void setGender(Gender gender) {
         this.gender = gender;
@@ -140,8 +145,12 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
         HashSet<AbstractCreature> result = new HashSet<>();
         AbstractCreature father = this.getFather();
         AbstractCreature mother = this.getMother();
-        result.addAll(father.getChildren());
-        result.addAll(mother.getChildren());
+        if (father != null) {
+            result.addAll(father.getChildren());
+        }
+        if (mother != null) {
+            result.addAll(mother.getChildren());
+        }
         result.remove(this);
         result.removeIf(human -> human.getGender() != gender);
 
@@ -154,7 +163,7 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
         HashSet<AbstractCreature> result = this.getSiblings(gender);
         String word = gender == Gender.man ? "брат" : "сестра";
         if (result == null) {
-            System.out.printf("У %s нет %s", this, word);
+            System.out.printf("У %s нет %s\n", this, word);
             return;
         }
 
@@ -228,7 +237,7 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
     }
     public void showUnclesAunts(Gender gender) {
         HashSet<AbstractCreature> unclesOrAunts = this.getUnclesAunts(gender);
-        String word = gender == Gender.man ? "дядя" : "тетя";
+        String word = gender == Gender.man ? "дяди" : "тети";
         if (unclesOrAunts == null) {
             System.out.printf("У %s нет %s\n", this, word);
             return;

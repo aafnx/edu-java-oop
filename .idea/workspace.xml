@@ -3,11 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/AbstractCreature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/AbstractCreature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/FamilyTreeShowable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/FamilyTreeShowable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/AbstractCreature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/FamilyTreeShowable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Human.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractCreature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTreeShowable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTreeShowable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AbstractCreature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FamilyTreeShowable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTreeShowable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,5 +257,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
