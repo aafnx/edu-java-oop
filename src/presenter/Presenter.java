@@ -18,27 +18,41 @@ public class Presenter {
         this.calculator = calculator;
     }
 
-    public void parse(String text) {
+    public void parse(String text) throws NumberFormatException {
         List<String> commands = new ArrayList<>(Arrays.asList(text.split(" ")));
+        commands.removeIf(string -> string.equals(""));
+        if (checkCommands(commands)) {
+            this.wrongData();
+            return;
+        }
         String operator = commands.get(1);
-        double n1 = Double.parseDouble(commands.get(0));
-        double n2 = Double.parseDouble(commands.get(2));
-        this.calculate(operator, n1, n2);
+        double n1;
+        double n2;
+        try {
+            n1 = Double.parseDouble(commands.get(0));
+            n2 = Double.parseDouble(commands.get(2));
+        } catch (NumberFormatException exception) {
+            view.print(exception.getMessage());
+            this.wrongData();
+            return;
+        }
+
+        view.print(buildMessage(calculator.calculate(operator, n1, n2)));
+
     }
     public String buildMessage(Double n) {
-
-        if (Double.isInfinite(n)) {
-            return "На ноль делить нельзя!";
+        if (n == null) {
+            this.wrongData();
+            return "";
         }
         return "Result - " + n;
     }
-    public void calculate(String operator, double n1, double n2) {
-        switch (operator) {
-            case "+" -> view.print(this.buildMessage(calculator.sum(n1, n2)));
-            case "-" -> view.print(this.buildMessage(calculator.minus(n1, n2)));
-            case "*" -> view.print(this.buildMessage(calculator.multiplication(n1, n2)));
-            case "/" -> view.print(this.buildMessage(calculator.dividing(n1, n2)));
-            default -> view.print("Wrong operator");
-        }
+
+    public boolean checkCommands(List<String> list) {
+        return list.size() < 3;
+    }
+
+    public void wrongData() {
+        view.print("Wrong data");
     }
 }

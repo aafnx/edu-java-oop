@@ -3,30 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/CreateTreeHuman.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeShowable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Human.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Terminal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/cmd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/view/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AbstractCreature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CreateTreeHuman.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeShowable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Gender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Terminal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/cmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/presenter/Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/presenter/Presenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/Presenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
