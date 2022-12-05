@@ -4,12 +4,29 @@
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/CreateTreeHuman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeShowable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Terminal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/cmd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProject/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/view/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AbstractCreature.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CreateTreeHuman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeShowable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Terminal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/cmd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +37,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson-4" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -241,7 +263,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lesson-4" />
+                        <option value="lesson-5" />
                       </list>
                     </value>
                   </entry>
