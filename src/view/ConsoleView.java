@@ -23,6 +23,6 @@ public class ConsoleView implements View {
     public void init() {
         System.out.print("Type command --> ");
         String commands = this.scanner.nextLine();
-        presenter.parse(commands);
+        presenter.start(commands);
     }
 }
