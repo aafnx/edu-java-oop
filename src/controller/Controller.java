@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Controller<T extends AbstractCreature> {
-    private FamilyTreeRepository<T> familyTreeRepository;
+public class Controller {
+    private FamilyTreeRepository familyTreeRepository;
     private Terminal terminal;
 
-    public Controller(FamilyTreeRepository<T> familyTreeRepository) {
+    public Controller(FamilyTreeRepository familyTreeRepository) {
         this.familyTreeRepository = familyTreeRepository;
     }
 

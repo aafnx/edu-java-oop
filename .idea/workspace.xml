@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/FamilyTreeGeneratable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/CreateTreeHuman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/CreateTreeHuman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeShowable.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProject/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/view/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AbstractCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AbstractCreature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeShowable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeGeneratable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTreeGeneratable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

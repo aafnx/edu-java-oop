@@ -6,10 +6,10 @@ import model.AbstractCreature;
 import java.util.Scanner;
 
 public class View<T extends AbstractCreature> {
-    private Controller<T> controller;
+    private Controller controller;
     private Scanner scanner;
     private String dataIn;
-    public View(Controller<T> controller) {
+    public View(Controller controller) {
         this.controller = controller;
     }
 

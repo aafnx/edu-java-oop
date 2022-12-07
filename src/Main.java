@@ -11,8 +11,7 @@ public class Main {
         FamilyTreeRepository<Human> familyTreeRepository = new FamilyTreeRepository<>();
         familyTreeRepository.addAll(createTreeHuman.getList());
 
-
-        Controller<Human> controller = new Controller<>(familyTreeRepository);
+        Controller controller = new Controller(familyTreeRepository);
         controller.setTerminal(new Terminal());
         View<Human> view = new View<>(controller);
         view.init();

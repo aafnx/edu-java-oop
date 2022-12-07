@@ -90,10 +90,6 @@ public abstract class AbstractCreature implements FamilyTreeGeneratable<Abstract
         }
         return result;
     }
-
-
-
-
     public AbstractCreature getSpouse() {
         if (this.getChildren() == null) {
             return null;
@@ -108,7 +104,6 @@ public abstract class AbstractCreature implements FamilyTreeGeneratable<Abstract
         }
         return null;
     }
-
     public HashSet<AbstractCreature> getSiblings(Gender gender) {
         HashSet<AbstractCreature> result = new HashSet<>();
         AbstractCreature father = this.getFather();
@@ -149,11 +144,6 @@ public abstract class AbstractCreature implements FamilyTreeGeneratable<Abstract
         }
         return result;
     }
-
-
-
-
-
     @Override
     public String toString() {
         return String.format("name: %s, gender: %s", this.firstName, this.gender);
