@@ -1,6 +1,4 @@
-// Продолжаем грейдить наш проект с гениологическим древом.
-// Изменить древо, сделать класс параметизированным.
-// Продумать класс общения с пользователем, сделать набор команд, для операций над деревом
+// Провести рефактор используя SOLID
 
 import controller.Controller;
 import model.*;
@@ -14,7 +12,8 @@ public class Main {
         familyTreeRepository.addAll(createTreeHuman.getList());
 
 
-        Controller<Human> controller = new Controller<>(familyTreeRepository, new Terminal());
+        Controller<Human> controller = new Controller<>(familyTreeRepository);
+        controller.setTerminal(new Terminal());
         View<Human> view = new View<>(controller);
         view.init();
 

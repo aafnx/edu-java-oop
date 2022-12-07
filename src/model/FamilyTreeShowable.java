@@ -1,20 +1,15 @@
 package model;
 
-import java.util.HashSet;
-import java.util.List;
-
-public interface FamilyTreeShowable<T extends AbstractCreature> {
-    T getFather();
-    T getMother();
-    List<T> getParents();
-    T getSpouse();
-    HashSet<T> getSiblings(Gender gender);
-    HashSet<T> getUnclesAunts(Gender gender);
-    void showChildren();
-    void showParents();
-    void showSpouse();
-    void showSiblings(Gender gender);
-    void showTreeParents();
-    void showTreeDescendants();
-    void showUnclesAunts(Gender gender);
+public interface FamilyTreeShowable {
+    void show(String name);
+    void showFather(String name);
+    void showMother(String name);
+    void showParents(String name);
+    void showSpouse(String name);
+    void showChildren(String name);
+    void showSiblings(String name, Gender gender);
+    void showUnclesAunts(String name, Gender gender);
+    void showTreeParents(String name);
+    void showTreeDescendants(String name);
+    void showAll();
 }

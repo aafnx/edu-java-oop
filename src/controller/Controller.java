@@ -10,12 +10,23 @@ public class Controller<T extends AbstractCreature> {
     private FamilyTreeRepository<T> familyTreeRepository;
     private Terminal terminal;
 
-    public Controller(FamilyTreeRepository<T> familyTreeRepository, Terminal terminal) {
+    public Controller(FamilyTreeRepository<T> familyTreeRepository) {
         this.familyTreeRepository = familyTreeRepository;
+    }
+
+    public void setTerminal(Terminal terminal) {
         this.terminal = terminal;
     }
-    public boolean scanCommand(String data) {
+    public boolean working(String data) {
+        List<String> parsed = this.parse(data);
+        String action = parsed.get(0);
+        String name = parsed.get(1);
+
+        return this.task(action, name);
+    }
+    public List<String> parse(String data) {
         List<String> in = new ArrayList<>(Arrays.asList(data.split(" ", 2)));
+        List<String> result = new ArrayList<>();
 
         String action = in.get(0);
         String name = "";
@@ -23,8 +34,11 @@ public class Controller<T extends AbstractCreature> {
         if (in.size() > 1) {
             name = in.get(1);
         }
+        result.add(action);
+        result.add(name);
+        return  result;
 
-        return this.task(action, name);
+
     }
     public boolean task(String action, String name) {
         action = action.toLowerCase();

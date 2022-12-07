@@ -18,7 +18,7 @@ public class View<T extends AbstractCreature> {
         while (active) {
             System.out.print("Print command --> ");
             this.dataIn = scanner.nextLine();
-            active = controller.scanCommand(dataIn);
+            active = controller.working(dataIn);
         }
         this.stop();
     }

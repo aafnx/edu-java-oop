@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCreature> {
+public abstract class AbstractCreature implements FamilyTreeGeneratable<AbstractCreature> {
     private static int count;
     protected final int id;
     protected String firstName;
@@ -40,22 +40,22 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
     public void addChild(AbstractCreature child) {
         this.children.add(child);
     }
-    public void setFather(AbstractCreature father) {
+    public boolean setFather(AbstractCreature father) {
         if (father.gender == Gender.man) {
             this.father = father;
             this.father.addChild(this);
-        } else {
-            System.out.println("Введено некорректное значение");
+            return true;
         }
+        return false;
     }
 
-    public void setMother(AbstractCreature mother) {
+    public boolean setMother(AbstractCreature mother) {
         if (mother.gender == Gender.woman) {
             this.mother = mother;
             this.mother.addChild(this);
-        } else {
-            System.out.println("Введено некорректное значение");
+            return true;
         }
+        return false;
     }
     public int getId() { return this.id; }
     public Gender getGender() {
@@ -66,20 +66,6 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
             return null;
         }
         return this.children;
-    }
-    public void showChildren() {
-        List<AbstractCreature> children = this.getChildren();
-        if (children == null) {
-//            System.out.printf("У %s, нет детей\n", this.firstName);
-            System.out.printf("У %s нет детей\n", this);
-        } else {
-            System.out.printf("Дети %s:\n", this);
-            for (AbstractCreature child : children) {
-//                System.out.printf("%s %s %s\n", child.firstName, child.lastName, child.gender);
-                System.out.println(child);
-            }
-            System.out.print("-------\n");
-        }
     }
     public AbstractCreature getFather() {
         return this.father;
@@ -104,19 +90,10 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
         }
         return result;
     }
-    public void showParents() {
-        List<AbstractCreature> parents = this.getParents();
-        if (parents == null) {
-            System.out.printf("Родители %s неизвестны\n", this);
-        } else {
-            System.out.printf("Родители %s: \n", this);
-            for (AbstractCreature parent : parents) {
-//                System.out.printf("%s %s %s\n", parent.firstName, parent.lastName, parent.gender);
-                System.out.println(parent);
-            }
-            System.out.print("------\n");
-        }
-    }
+
+
+
+
     public AbstractCreature getSpouse() {
         if (this.getChildren() == null) {
             return null;
@@ -132,15 +109,6 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
         return null;
     }
 
-    public void showSpouse() {
-        AbstractCreature spouse = this.getSpouse();
-        String word = this.gender == Gender.man ? "супруга" : "супруг";
-        if (spouse == null) {
-            System.out.printf("У %s отсутсвует %s\n", this, word);
-            return;
-        }
-        System.out.printf("У %s есть %s – %s \n", this, word, spouse);
-    }
     public HashSet<AbstractCreature> getSiblings(Gender gender) {
         HashSet<AbstractCreature> result = new HashSet<>();
         AbstractCreature father = this.getFather();
@@ -158,60 +126,6 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
             return null;
         }
         return result;
-    }
-    public void showSiblings(Gender gender) {
-        HashSet<AbstractCreature> result = this.getSiblings(gender);
-        String word = gender == Gender.man ? "брат" : "сестра";
-        if (result == null) {
-            System.out.printf("У %s нет %s\n", this, word);
-            return;
-        }
-
-        System.out.printf("У %s есть %s :\n", this, word);
-        for (AbstractCreature person : result ) {
-//            System.out.printf("%s %s %s\n", human.firstName, human.lastName, human.gender);
-            System.out.println(person);
-        }
-        System.out.print("------\n");
-    }
-
-    public void showTreeParents() {
-        if (this.getParents() == null) {
-            System.out.printf("Предки %s неизвестны\n", this);
-            return;
-        }
-        System.out.print("Все предки ");
-        this.generateTreeParents(this, "");
-        System.out.println("------");
-    }
-    private void generateTreeParents(AbstractCreature person, String spaces) {
-        if (person == null) {
-            return;
-        }
-        System.out.printf("%s %s \n", spaces, person);
-        spaces += "  ";
-        generateTreeParents(person.father, spaces);
-        generateTreeParents(person.mother, spaces);
-    }
-    public void showTreeDescendants() {
-        if (this.getChildren() == null) {
-            System.out.printf("Потомки %s неизвестны\n",this);
-            return;
-        }
-        System.out.print("Все потомки ");
-        this.generateTreeDescendants(this, "");
-        System.out.println("------");
-    }
-    private void generateTreeDescendants(AbstractCreature person, String spaces) {
-        if (person == null) {
-            return;
-        }
-        System.out.printf("%s %s \n", spaces, person);
-        spaces += "  ";
-        for (AbstractCreature child : person.children) {
-            generateTreeDescendants(child, spaces);
-        }
-
     }
     public HashSet<AbstractCreature> getUnclesAunts(Gender gender) {
         HashSet<AbstractCreature> result = new HashSet<>();
@@ -235,20 +149,11 @@ public abstract class AbstractCreature implements FamilyTreeShowable<AbstractCre
         }
         return result;
     }
-    public void showUnclesAunts(Gender gender) {
-        HashSet<AbstractCreature> unclesOrAunts = this.getUnclesAunts(gender);
-        String word = gender == Gender.man ? "дяди" : "тети";
-        if (unclesOrAunts == null) {
-            System.out.printf("У %s нет %s\n", this, word);
-            return;
-        }
-        System.out.printf("У %s есть %s :\n", this, word);
-        for (AbstractCreature uncleOrAunt : unclesOrAunts) {
-//            System.out.printf("%s %s %s\n", uncleAunt.firstName, uncleAunt.lastName, uncleAunt.gender);
-            System.out.println(uncleOrAunt);
-        }
-        System.out.println("-------");
-    }
+
+
+
+
+
     @Override
     public String toString() {
         return String.format("name: %s, gender: %s", this.firstName, this.gender);
