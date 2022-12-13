@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="">
+    <list default="true" id="f81e2051-1471-4028-8980-f2e7aace0586" name="Default Changelist" comment="Исправлена связь между model - view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/AbstractCreature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/FamilyTreeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/model/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/model/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProject/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProject/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FamilyTreeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670920928445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Исправлена связь между model - view">
+      <created>1670921169698</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670921169698</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

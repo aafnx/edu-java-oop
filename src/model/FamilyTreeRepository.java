@@ -80,11 +80,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         if (parents == null) {
             view.print("Родители " + person + " неизвестны");
         } else {
-            System.out.printf("Родители %s: \n", person);
+            view.print("Родители " + person + ":");
             for (AbstractCreature parent : parents) {
                 view.print(parent.toString());
             }
-            System.out.print("------\n");
+            view.print("------");
         }
     }
 
@@ -113,11 +113,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         if (children == null) {
             view.print("У " + person + " нет детей");
         } else {
-            System.out.printf("Дети %s:\n", person);
+            view.print("Дети " + person + ":");
             for (AbstractCreature child : children) {
                 view.print(child.toString());
             }
-            System.out.print("-------\n");
+            view.print("------");
         }
     }
 
@@ -138,7 +138,7 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         for (AbstractCreature p : result ) {
             view.print(p.toString());
         }
-        System.out.print("------\n");
+        view.print("------");
     }
 
     public void showUnclesAunts(String name, Gender gender) {
@@ -157,7 +157,7 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         for (AbstractCreature uncleOrAunt : unclesOrAunts) {
             view.print(uncleOrAunt.toString());
         }
-        System.out.println("-------");
+        view.print("------");
     }
 
     public void showTreeParents(String name) {
