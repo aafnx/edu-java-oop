@@ -1,6 +1,12 @@
 package model;
 
+import view.View;
+
 public class Terminal {
+    private View view;
+    public void setView(View view) {
+        this.view = view;
+    }
     public boolean start() {
         return true;
     }
@@ -9,13 +15,14 @@ public class Terminal {
     }
 
     public void commandNotFound() {
-        System.err.printf("\nCommand not found: list commands - '%s', if you want exit type - '%s'", cmd.list.name(), cmd.exit.name());
+        view.printError("Command not found: list commands - '" + cmd.list.name() + "', if you want exit type - '" + cmd.exit.name() + "'");
     }
     public void printCommands() {
-        System.out.println("List commands: ");
+        view.print("List commands: ");
         for (cmd command : cmd.values()) {
-            System.out.printf("%s ", command.name());
+            view.print(command.name());
         }
-        System.out.println();
+        view.print("-------");
+
     }
 }

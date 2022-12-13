@@ -10,7 +10,9 @@ public class Controller<T extends AbstractCreature> {
     private FamilyTreeRepository<T> familyTreeRepository;
     private Terminal terminal;
 
-    public Controller(FamilyTreeRepository<T> familyTreeRepository) {
+    public Controller() {;
+    }
+    public void setFamilyTreeRepository(FamilyTreeRepository<T> familyTreeRepository) {
         this.familyTreeRepository = familyTreeRepository;
     }
 

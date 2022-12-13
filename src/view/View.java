@@ -1,15 +1,14 @@
 package view;
 
 import controller.Controller;
-import model.AbstractCreature;
 
 import java.util.Scanner;
 
-public class View<T extends AbstractCreature> {
-    private Controller<T> controller;
+public class View {
+    private Controller controller;
     private Scanner scanner;
     private String dataIn;
-    public View(Controller<T> controller) {
+    public View(Controller controller) {
         this.controller = controller;
     }
 
@@ -28,5 +27,11 @@ public class View<T extends AbstractCreature> {
     }
     private void stop() {
         scanner.close();
+    }
+    public void print(String message) {
+        System.out.println(message);
+    }
+    public void printError(String error) {
+        System.err.println(error);
     }
 }

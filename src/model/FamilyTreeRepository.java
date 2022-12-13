@@ -1,13 +1,20 @@
 package model;
 
+import view.View;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyTreeShowable {
     private List<T> list;
+    private View view;
     public FamilyTreeRepository() {
         this.list = new ArrayList<>();
+    }
+
+    public void setView(View view) {
+        this.view = view;
     }
     public void add(T creature) {
         this.list.add(creature);
@@ -25,7 +32,6 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
                 return person;
             }
         }
-        System.out.println("Not found");
         return null;
     }
     public void show(String name) {
@@ -34,7 +40,7 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
             this.showNotFoundPerson();
             return;
         }
-        System.out.println(person);
+        view.print(person.toString());
     }
     public void showFather(String name) {
         T person = this.findByName(name);
@@ -42,7 +48,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
             this.showNotFoundPerson();
             return;
         }
-        System.out.println(person.getFather());
+        if (person.getFather() == null) {
+            view.print("Папа " + person + " неизвестен");
+            return;
+        }
+        view.print(person.getFather().toString());
     }
     public void showMother(String name) {
         T person = this.findByName(name);
@@ -50,10 +60,14 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
             this.showNotFoundPerson();
             return;
         }
-        System.out.println(person.getMother());
+        if (person.getMother() == null) {
+            view.print("Мама " + person + " неизвестена");
+            return;
+        }
+        view.print(person.getMother().toString());
     }
     public void showNotFoundPerson() {
-        System.err.println("Not found person");
+        view.printError("Not found person");
     }
 
     public void showParents(String name) {
@@ -64,11 +78,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         }
         List<AbstractCreature> parents = person.getParents();
         if (parents == null) {
-            System.out.printf("Родители %s неизвестны\n", person);
+            view.print("Родители " + person + " неизвестны");
         } else {
             System.out.printf("Родители %s: \n", person);
             for (AbstractCreature parent : parents) {
-                System.out.println(parent);
+                view.print(parent.toString());
             }
             System.out.print("------\n");
         }
@@ -83,10 +97,10 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         AbstractCreature spouse = person.getSpouse();
         String word = person.gender == Gender.man ? "супруга" : "супруг";
         if (spouse == null) {
-            System.out.printf("У %s отсутсвует %s\n", person, word);
+            view.print("У " + person + " отсутсвует " + word);
             return;
         }
-        System.out.printf("У %s есть %s – %s \n", person, word, spouse);
+        view.print("У " + person + " есть " + word + " – " + spouse);
     }
 
     public void showChildren(String name) {
@@ -97,11 +111,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         }
         List<AbstractCreature> children = person.getChildren();
         if (children == null) {
-            System.out.printf("У %s нет детей\n", person);
+            view.print("У " + person + " нет детей");
         } else {
             System.out.printf("Дети %s:\n", person);
             for (AbstractCreature child : children) {
-                System.out.println(child);
+                view.print(child.toString());
             }
             System.out.print("-------\n");
         }
@@ -116,13 +130,13 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         HashSet<AbstractCreature> result = person.getSiblings(gender);
         String word = gender == Gender.man ? "брат" : "сестра";
         if (result == null) {
-            System.out.printf("У %s нет %s\n", person, word);
+            view.print("У " + person + " нет " + word);
             return;
         }
 
-        System.out.printf("У %s есть %s:\n", person, word);
+        view.print("У " + person + " есть " + word);
         for (AbstractCreature p : result ) {
-            System.out.println(p);
+            view.print(p.toString());
         }
         System.out.print("------\n");
     }
@@ -136,12 +150,12 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
         HashSet<AbstractCreature> unclesOrAunts = person.getUnclesAunts(gender);
         String word = gender == Gender.man ? "дяди" : "тети";
         if (unclesOrAunts == null) {
-            System.out.printf("У %s нет %s\n", person, word);
+            view.print("У " + person + " нет " + word);
             return;
         }
-        System.out.printf("У %s есть %s:\n", person, word);
+        view.print("У " + person + " есть " + word);
         for (AbstractCreature uncleOrAunt : unclesOrAunts) {
-            System.out.println(uncleOrAunt);
+            view.print(uncleOrAunt.toString());
         }
         System.out.println("-------");
     }
@@ -153,18 +167,18 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
             return;
         }
         if (person.getParents() == null) {
-            System.out.printf("Предки %s неизвестны\n", this);
+            view.print("Предки " + this + " неизвестны");
             return;
         }
-        System.out.print("Все предки ");
+        view.print("Все предки");
         this.generateTreeParents(person, "");
-        System.out.println("------");
+        view.print("------");
     }
     private void generateTreeParents(AbstractCreature person, String spaces) {
         if (person == null) {
             return;
         }
-        System.out.printf("%s %s \n", spaces, person);
+        view.print(spaces + " " + person);
         spaces += "  ";
         generateTreeParents(person.father, spaces);
         generateTreeParents(person.mother, spaces);
@@ -177,18 +191,18 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
             return;
         }
         if (person.getChildren() == null) {
-            System.out.printf("Потомки %s неизвестны\n",this);
+            view.print("Потомки " + this + " неизвестны");
             return;
         }
-        System.out.print("Все потомки ");
+        view.print("Все потомки ");
         this.generateTreeDescendants(person, "");
-        System.out.println("------");
+        view.print("------");
     }
     private void generateTreeDescendants(AbstractCreature person, String spaces) {
         if (person == null) {
             return;
         }
-        System.out.printf("%s %s \n", spaces, person);
+        view.print(spaces + " " + person);
         spaces += "  ";
         for (AbstractCreature child : person.children) {
             generateTreeDescendants(child, spaces);
@@ -198,11 +212,11 @@ public class FamilyTreeRepository<T extends AbstractCreature> implements FamilyT
     public void showAll() {
         List<T> list = this.getList();
         if (list.size() == 0) {
-            System.out.println("Tree is empty");
+            view.print("Tree is empty");
         }
-        System.out.println("In Tree:");
+        view.print("In Tree: ");
         for (T person : list) {
-            System.out.println(person);
+            view.print(person.toString());
         }
     }
 }
